@@ -1,3 +1,7 @@
+#Steps
+1. fork nbdev_template project (fastai/nbdev_template)
+
+
 # nbdev template
 
 Use this template to more easily create your [nbdev](https://nbdev.fast.ai/) project.
