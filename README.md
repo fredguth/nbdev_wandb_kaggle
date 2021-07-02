@@ -1,7 +1,3 @@
-#Steps
-1. fork nbdev_template project (fastai/nbdev_template)
-2. change settings.ini
-
 # nbdev template
 
 Use this template to more easily create your [nbdev](https://nbdev.fast.ai/) project.
