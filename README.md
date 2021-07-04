@@ -3,14 +3,21 @@
 
 
 ## Steps
-1. fork nbdev_template project (fastai/nbdev_template)
+1) Fork nbdev_template project (fastai/nbdev_template)
+
 `gh repo fork https://github.com/fastai/nbdev_template.git --clone`
-1. change settings.ini
-1. set GITHUB_TOKEN with a [personal access token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token)
-💥 danger: check if .environment is in .gitignore.  Do not publish your .environment file.
-1. In the root directory:
+
+2) Change settings.ini
+
+3) set .env
+
+💥 danger: check if .env is in .gitignore.  Do not publish your .environment file.
+
+4) In the root directory:
 `nbdev_new`
+
 `nbdev_install_git_hooks`
+
 
 ## Notebooks
 - [] 00_setup.ipynb
@@ -19,6 +26,9 @@
 - [] 03_analyse.ipynb
 - [] 04_submit.ipynb
 
+`nbdev_build_lib`
+`nbdev_build_docs`
+`pip install -e .`
 ## How to use
 
 Fill me in please! Don't forget code examples:
@@ -26,10 +36,3 @@ Fill me in please! Don't forget code examples:
 ```python
 1+1
 ```
-
-
-
-
-    2
-
-

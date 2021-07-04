@@ -3,9 +3,11 @@
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
 index = {"get_kaggle_dataset": "00_setup.ipynb",
+         "pathFromCompetition": "00_setup.ipynb",
          "download_and_log": "00_setup.ipynb"}
 
-modules = ["setup.py"]
+modules = ["setup.py",
+           "eda.py"]
 
 doc_url = "https://fredguth.github.io/nfwk/"
 

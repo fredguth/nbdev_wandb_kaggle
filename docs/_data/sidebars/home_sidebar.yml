@@ -12,6 +12,9 @@ entries:
     - output: web,pdf
       title: Setup functions
       url: setup.html
+    - output: web,pdf
+      title: Exploratory Dataset Analysis
+      url: eda.html
     output: web
     title: nfwk
   output: web
