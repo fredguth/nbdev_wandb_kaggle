@@ -26,9 +26,6 @@
 - [] 03_analyse.ipynb
 - [] 04_submit.ipynb
 
-`nbdev_build_lib`
-`nbdev_build_docs`
-`pip install -e .`
 ## How to use
 
 Fill me in please! Don't forget code examples:
