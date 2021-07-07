@@ -4,6 +4,7 @@ __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
 index = {"get_kaggle_dataset": "00_setup.ipynb",
          "pathFromCompetition": "00_setup.ipynb",
+         "confirm": "00_setup.ipynb",
          "download_and_log": "00_setup.ipynb",
          "setup": "00_setup.ipynb"}
 
