@@ -3,6 +3,8 @@
 __all__ = ['get_kaggle_dataset', 'pathFromCompetition', 'confirm', 'download_and_log', 'setup']
 
 # Cell
+import warnings
+warnings.filterwarnings('ignore')
 from dotenv import load_dotenv
 # https://technowhisp.com/kaggle-api-python-documentation/
 from kaggle.api.kaggle_api_extended import KaggleApi
@@ -64,7 +66,7 @@ def confirm(msg=""):
     return answer == "y"
 
 # Cell
-def download_and_log(competition):
+def download_and_log(competition, entity=None):
     """ Start a Run for data download at WandB, download competition data and log data reference in local machine as an Artifact at WandB.
     args:
         competition: string containing competition name
@@ -81,7 +83,8 @@ def download_and_log(competition):
         print (f'No competition {competition} found at Kaggle.')
         return None
     # 🚀 start a run, with a type to label it and a project it can call home
-    with wandb.init(project=competition, job_type="download-data") as run:
+    wandb.init()
+    with wandb.init(project=competition, entity=entity, job_type="download-data") as run:
         path = get_kaggle_dataset(competition)
         sizes = {}
         raw_data = wandb.Artifact(
@@ -100,10 +103,10 @@ def download_and_log(competition):
         return path
 
 # Cell
-def setup(competition):
+def setup(competition, entity=None):
     """ Returns Path to local competition files, download and log data if needed.
     """
-    load_dotenv()
+    # load_dotenv()
     k = KaggleApi()
     k.authenticate()
     try:
@@ -115,5 +118,15 @@ def setup(competition):
         p = pathFromCompetition(competition)
     except:
         if not confirm(f'Download data for {competition} '): return None
-        return download_and_log(competition)
+        return download_and_log(competition, entity)
     return p
+
+# Cell
+from .data import *
+from fastai.vision.all import *
+from fastai.medical.imaging import *
+import matplotlib.pyplot as plt
+import seaborn as sns
+from tqdm import tqdm
+import wandb
+assert torch.cuda.is_available()
