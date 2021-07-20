@@ -281,6 +281,7 @@ dependencies:
     - nbdev==1.1.14
     - pandarallel==1.5.2
     - pathtools==0.1.2
+    - plotly==5.1.0
     - pluggy==0.13.1
     - py==1.10.0
     - pytest==6.2.4
@@ -288,6 +289,7 @@ dependencies:
     - seaborn==0.11.1
     - sentry-sdk==1.1.0
     - smmap==4.0.0
+    - tenacity==8.0.1
     - timm==0.4.12
     - toml==0.10.2
 prefix: /home/fred/.conda/envs/covid19
